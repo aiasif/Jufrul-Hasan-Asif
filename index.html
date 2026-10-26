@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>জাফরুল হাসান আসিফ | 3D Futuristic Portfolio & AI Systems</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="জাফরুল হাসান আসিফ — প্রফেশনাল কম্পিউটার ট্রেইনার, এআই ইঞ্জিনিয়ার, ৩ডি ক্রিয়েটিভ ডিজাইনার ও ভিডিও এডিটর। এ.কে.এ কম্পিউটার ট্রেনিং সেন্টার, হাটহাজারী, চট্টগ্রাম।">
+  <meta name="keywords" content="Jafrul Hasan Asif, জাফরুল হাসান আসিফ, AI Engineer, Computer Trainer, Hathazari, Chittagong, Spline 3D, Video Editor, Graphic Designer, AKA Computer Training Center">
+  <meta name="author" content="Jafrul Hasan Asif">
+
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="জাফরুল হাসান আসিফ | 3D Futuristic Portfolio">
+  <meta property="og:description" content="আধুনিক প্রযুক্তি ও কৃত্রিম বুদ্ধিমত্তার (AI) সমন্বয়ে ফিউচারিস্টিক ৩ডি পোর্টফোলিও ওয়েবসাইট।">
+  <meta property="og:type" content="website">
+
+  <!-- Font Awesome 6.5.0 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Design System CSS (White & Dark Red) -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Spline 3D Viewer Web Component -->
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.72/build/spline-viewer.js"></script>
+</head>
+<body>
+
+  <!-- Custom Cyber Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Red Ambient Glow Follower -->
+  <div class="ambient-glow" id="ambientGlow"></div>
+
+  <!-- WhatsApp Floating Action Button -->
+  <a href="https://wa.me/8801887970095" class="fab-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Contact">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Toast Notification Box -->
+  <div class="toast-msg" id="toastMsg">
+    <i class="fas fa-check-circle" id="toastIcon" style="color: #27C93F; font-size: 1.2rem;"></i>
+    <span id="toastText">বার্তা পাঠানো হয়েছে!</span>
+  </div>
+
+  <!-- ==========================================================================
+       HUD NAVBAR
+       ========================================================================== -->
+  <header class="hud-navbar">
+    <nav class="nav-container">
+      <a href="#hero" class="brand-badge">
+        <div class="brand-logo-cube">আ</div>
+        <div class="brand-info">
+          <span class="brand-name">জাফরুল হাসান আসিফ</span>
+          <span class="brand-status">
+            <span class="status-pulse"></span>
+            <span>AVAILABLE FOR PROJECTS</span>
+          </span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-link active">হোম</a></li>
+        <li><a href="#about" class="nav-link">পরিচিতি</a></li>
+        <li><a href="#capabilities" class="nav-link">সার্ভিস</a></li>
+        <li><a href="#terminal" class="nav-link">এআই কনসোল</a></li>
+        <li><a href="#projects" class="nav-link">প্রজেক্ট</a></li>
+        <li><a href="#skills" class="nav-link">দক্ষতা</a></li>
+        <li><a href="#academy" class="nav-link">ট্রেনিং সেন্টার</a></li>
+        <li><a href="#contact" class="nav-link">যোগাযোগ</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="audio-btn" id="soundToggle" aria-label="Toggle Sound Effects" title="সাউন্ড ইফেক্ট অন/অফ">
+          <i class="fas fa-volume-mute"></i>
+        </button>
+        <a href="#contact" class="btn-cyber-primary">
+          <i class="fas fa-paper-plane"></i>
+          <span>কথা বলুন</span>
+        </a>
+        <button class="nav-toggle" id="menuToggle" aria-label="Open Mobile Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenu">
+    <button id="mobileClose" style="position: absolute; top: 24px; right: 28px; background: none; border: none; font-size: 2rem; color: var(--red-dark); cursor: pointer;">
+      <i class="fas fa-times"></i>
+    </button>
+    <a href="#hero" class="mobile-link">হোম</a>
+    <a href="#about" class="mobile-link">পরিচিতি</a>
+    <a href="#capabilities" class="mobile-link">ফিউচারিস্টিক সার্ভিস</a>
+    <a href="#terminal" class="mobile-link">এআই টার্মিনাল</a>
+    <a href="#projects" class="mobile-link">প্রজেক্টসমূহ</a>
+    <a href="#skills" class="mobile-link">দক্ষতা ও টেকনোলজি</a>
+    <a href="#academy" class="mobile-link">ট্রেনিং একাডেমি</a>
+    <a href="#contact" class="mobile-link">যোগাযোগ করুন</a>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION (INTERACTIVE 3D BLACK ROBOT)
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="hero-container">
+        <div class="hero-grid">
+          
+          <!-- Hero Text Content (Left Column) -->
+          <div class="hero-content">
+            <div class="hero-badge-tag">
+              <span class="status-pulse"></span>
+              <span>ফিউচারিস্টিক ৩ডি পোর্টফোলিও • এআই অ্যান্ড ক্রিয়েটিভ সিস্টেমস</span>
+            </div>
+
+            <h1 class="hero-title">
+              <span class="hero-title-greeting">হ্যালো, আমি একজন —</span>
+              <span class="gradient-red-text">জাফরুল হাসান আসিফ</span>
+            </h1>
+
+            <p class="hero-description">
+              প্রফেশনাল কম্পিউটার ট্রেইনার, এআই ইঞ্জিনিয়ার, ৩ডি ক্রিয়েটিভ ডিরেক্টর এবং ভিডিও এডিটর। আধুনিক প্রযুক্তি ও কৃত্রিম বুদ্ধিমত্তার (AI) সমন্বয়ে আপনার ভবিষ্যৎ বিনির্মাণ ও ব্যবসায়িক অগ্রগতিতে সহায়তা করি।
+            </p>
+
+            <!-- Modern & Futuristic Capabilities Ribbon -->
+            <div class="capability-ribbon">
+              <span class="cap-chip"><i class="fas fa-robot"></i> অটোনোমাস এআই এজেন্টস</span>
+              <span class="cap-chip"><i class="fas fa-brain"></i> এলএলএম ও কাস্টম আরএজি</span>
+              <span class="cap-chip"><i class="fas fa-cube"></i> ৩ডি ওয়েব এক্সপেরিয়েন্স</span>
+              <span class="cap-chip"><i class="fas fa-film"></i> সিনেমাটিক ভিডিও এডিটিং</span>
+              <span class="cap-chip"><i class="fas fa-paint-brush"></i> ব্র্যান্ড আইডেন্টিটি</span>
+              <span class="cap-chip"><i class="fas fa-chalkboard-teacher"></i> কম্পিউটার মেন্টরশিপ</span>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="hero-cta-group">
+              <a href="#contact" class="btn-cyber-primary">
+                <i class="fas fa-comment-dots"></i>
+                <span>প্রজেক্ট শুরু করুন</span>
+              </a>
+              <a href="#capabilities" class="btn-cyber-outline">
+                <span>সার্ভিস বিস্তারিত দেখুন</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+
+            <!-- Social Links & Location -->
+            <div class="hero-social-bar">
+              <span class="social-title">কানেক্ট করুন:</span>
+              <div class="social-btn-group">
+                <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" class="social-round-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/8801887970095" target="_blank" rel="noopener noreferrer" class="social-round-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" class="social-round-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="social-round-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://t.me/" target="_blank" rel="noopener noreferrer" class="social-round-btn" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+              </div>
+              <div style="width: 1px; height: 26px; background: var(--border-medium); margin: 0 4px;"></div>
+              <span style="font-size: 0.85rem; color: var(--text-muted); display: flex; align-items: center; gap: 6px;">
+                <i class="fas fa-map-marker-alt" style="color: var(--red-dark);"></i>
+                চট্টগ্রাম, হাটহাজারী
+              </span>
+            </div>
+          </div>
+
+          <!-- Hero 3D Stage (Right Column — Interactive Black Robot) -->
+          <div class="hero-3d-stage">
+            <div class="holo-frame">
+              <!-- Corner Cyber Accents -->
+              <div class="holo-corner tl"></div>
+              <div class="holo-corner tr"></div>
+              <div class="holo-corner bl"></div>
+              <div class="holo-corner br"></div>
+
+              <!-- Floating Badges -->
+              <div class="holo-badge-card badge-top-left">
+                <div class="badge-icon-box"><i class="fas fa-microchip"></i></div>
+                <div>
+                  <div class="badge-text-title">অভিজ্ঞতা</div>
+                  <div class="badge-text-val">৫+ বছর প্রফেশনাল</div>
+                </div>
+              </div>
+
+              <div class="holo-badge-card badge-bottom-right">
+                <div class="badge-icon-box"><i class="fas fa-user-graduate"></i></div>
+                <div>
+                  <div class="badge-text-title">একাডেমি প্রশিক্ষণ</div>
+                  <div class="badge-text-val">১০০০+ শিক্ষার্থী</div>
+                </div>
+              </div>
+
+              <!-- Interactive Hint Indicator -->
+              <div class="interactive-hint">
+                <i class="fas fa-mouse-pointer" style="color: var(--red-neon);"></i>
+                <span>মাউস নাড়লে রোবটের মাথা দিক পরিবর্তন করবে</span>
+              </div>
+
+              <!-- Spline 3D Viewer & Fallback Loader -->
+              <div class="spline-wrapper">
+                <div class="robot-loader">
+                  <div class="loader-spinner-ring"></div>
+                  <div class="loader-text">INITIALIZING 3D NEURAL ROBOT...</div>
+                </div>
+                
+                <!-- Spline 3D Scene Provided By User -->
+                <spline-viewer url="https://prod.spline.design/rXdQLHKEiQRKgnvW/scene.splinecode"></spline-viewer>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         STATS SECTION (KEY METRICS)
+         ========================================================================== -->
+    <section class="stats-section">
+      <div class="stats-grid">
+        <div class="stat-box">
+          <div class="stat-number">৫+</div>
+          <div class="stat-label">বছরের অভিজ্ঞতা</div>
+          <div class="stat-sublabel">প্রযুক্তি ও ক্রিয়েটিভ ফিল্ডে</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">১০০০+</div>
+          <div class="stat-label">শিক্ষার্থী প্রশিক্ষিত</div>
+          <div class="stat-sublabel">এ.কে.এ কম্পিউটার সেন্টারে</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">৫০০+</div>
+          <div class="stat-label">ডিজাইন ও ভিডিও প্রজেক্ট</div>
+          <div class="stat-sublabel">সফলভাবে ক্লায়েন্টদের জন্য সম্পন্ন</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">১০০+</div>
+          <div class="stat-label">এআই ও অটোমেশন সিস্টেম</div>
+          <div class="stat-sublabel">আধুনিক ওয়ার্কফ্লো ও অ্যাপ্লিকেশন</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ABOUT SECTION (হোলোগ্রাফিক পরিচয়)
+         ========================================================================== -->
+    <section class="about-section" id="about">
+      <div class="section-container">
+        <div class="about-grid">
+          
+          <!-- About Portrait Photo Card -->
+          <div class="about-image-wrapper">
+            <div class="about-photo-card">
+              <img src="assets/images/asif-profile.jpg" alt="জাফরুল হাসান আসিফ - প্রোফাইল ছবি" class="about-profile-img">
+              <div class="about-photo-overlay"></div>
+              <div class="about-photo-badge">
+                <div>
+                  <div class="about-name-tag">জাফরুল হাসান আসিফ</div>
+                  <div class="about-loc-tag">
+                    <i class="fas fa-map-marker-alt" style="color: var(--red-neon);"></i>
+                    <span>হাটহাজারী, চট্টগ্রাম</span>
+                  </div>
+                </div>
+                <div style="background: var(--red-light); padding: 8px 14px; border-radius: 8px; font-weight: 700; color: var(--red-dark); font-size: 0.82rem;">
+                  PRO TRAINER
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- About Biography & Identity Details -->
+          <div class="about-bio-content">
+            <div class="section-tag">
+              <i class="fas fa-id-card"></i>
+              <span>পরিচিতি ও দর্শন</span>
+            </div>
+            
+            <h2 class="section-title">
+              প্রযুক্তির সাথে সৃজনশীলতার মিলন — <br>
+              <span class="gradient-red-text">ভবিষ্যতের ডিজিটাল আর্কিটেক্ট</span>
+            </h2>
+
+            <p class="about-bio-lead">
+              আমি জাফরুল হাসান আসিফ — চট্টগ্রামের হাটহাজারীর স্বনামধন্য <strong>"এ.কে.এ কম্পিউটার ট্রেনিং সেন্টার"</strong>-এর একজন পেশাদার কম্পিউটার ট্রেইনার, এআই ইঞ্জিনিয়ার এবং ডিজিটাল কনটেন্ট ক্রিয়েটর।
+            </p>
+
+            <p class="about-bio-p">
+              বিগত ৫+ বছর ধরে আমি শত শত তরুণ-তরুণী ও প্রফেশনালদের আধুনিক তথ্যপ্রযুক্তি, মাইক্রোসফট অফিস, গ্রাফিক্স ডিজাইন এবং ভিডিও এডিটিংয়ে দক্ষ করে তুলেছি। বর্তমান যুগ কৃত্রিম বুদ্ধিমত্তা (AI) ও অটোনোমাস সিস্টেমের—তাই আমি আমার দক্ষতায় যুক্ত করেছি সর্বাধুনিক এআই এজেন্ট, কাস্টম আরএজি (RAG), লার্জ ল্যাঙ্গুয়েজ মডেল (LLM), ৩ডি ওয়েব টেকনোলজি এবং স্মার্ট বিজনেস অটোমেশন।
+            </p>
+
+            <div class="about-highlight-box">
+              <div class="highlight-icon">
+                <i class="fas fa-school"></i>
+              </div>
+              <div>
+                <div class="highlight-title">এ.কে.এ কম্পিউটার ট্রেনিং সেন্টার</div>
+                <div class="highlight-desc">
+                  হাটহাজারী বড় মাদ্রাসার সামনে অবস্থিত চট্টগ্রামের অন্যতম নির্ভরযোগ্য ও সর্বাধুনিক কম্পিউটার প্রশিক্ষণ একাডেমি।
+                </div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+              <a href="#contact" class="btn-cyber-primary">
+                <i class="fas fa-paper-plane"></i>
+                <span>সরাসরি যোগাযোগ করুন</span>
+              </a>
+              <a href="#academy" class="btn-cyber-outline">
+                <i class="fas fa-graduation-cap"></i>
+                <span>একাডেমি সম্পর্কে জানুন</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FUTURISTIC CAPABILITIES (আধুনিক ও ফিউচারিস্টিক কাজ)
+         ========================================================================== -->
+    <section class="capabilities-section" id="capabilities" style="background: var(--bg-secondary);">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fas fa-bolt"></i>
+            <span>আধুনিক ও ফিউচারিস্টিক সার্ভিস</span>
+          </div>
+          <h2 class="section-title">আমি কোন কোন বিষয়ে <span class="gradient-red-text">বিশেষজ্ঞ?</span></h2>
+          <p class="section-subtitle">
+            প্রথাগত কম্পিউটার দক্ষতার বাইরে বর্তমান ও ভবিষ্যতের সবচেয়ে আধুনিক প্রযুক্তিসমূহে আমার বাস্তব অভিজ্ঞতা ও সেবাসমূহ:
+          </p>
+        </div>
+
+        <div class="capabilities-grid">
+          
+          <!-- Service 1: Autonomous AI Agents -->
+          <div class="cyber-card spotlight">
+            <div class="card-icon-container">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3 class="card-title">স্বয়ংক্রিয় এআই এজেন্ট সিস্টেম</h3>
+            <p class="card-desc">
+              CrewAI, LangGraph ও AutoGen ব্যবহার করে একাধিক এআই এজেন্টের সমন্বয়ে টিম তৈরি। রিসার্চ, ডাটা অ্যানালাইসিস এবং গ্রাহক সেবা স্বয়ংক্রিয়ভাবে পরিচালনার জটিল ওয়ার্কফ্লো ডিজাইন।
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">CrewAI</span>
+              <span class="card-tag">LangGraph</span>
+              <span class="card-tag">Multi-Agent</span>
+              <span class="card-tag">Autonomous</span>
+            </div>
+          </div>
+
+          <!-- Service 2: Custom Enterprise RAG & LLMs -->
+          <div class="cyber-card">
+            <div class="card-icon-container">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3 class="card-title">কাস্টম আরএজি ও এআই নলেজ বেস</h3>
+            <p class="card-desc">
+              আপনার ব্যবসা বা প্রতিষ্ঠানের সমস্ত ফাইল, পিডিএফ ও ডেটার উপর ভিত্তি করে নির্ভুল উত্তর প্রদানকারী কাস্টম RAG সিস্টেম ও ভেক্টর ডেটাবেস (Pinecone, ChromaDB) ইন্টিগ্রেশন।
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">RAG Architecture</span>
+              <span class="card-tag">Pinecone</span>
+              <span class="card-tag">Llama 3</span>
+              <span class="card-tag">OpenAI</span>
+            </div>
+          </div>
+
+          <!-- Service 3: 3D Interactive Web Experiences -->
+          <div class="cyber-card">
+            <div class="card-icon-container">
+              <i class="fas fa-cube"></i>
+            </div>
+            <h3 class="card-title">৩ডি ওয়েব ও ইন্টারঅ্যাক্টিভ ডিজাইন</h3>
+            <p class="card-desc">
+              Spline, Three.js ও WebGL ব্যবহার করে ব্রাউজারে ৩ডি অবজেক্ট, রোবট ও অ্যানিমেটেড ভিজ্যুয়াল তৈরি যা ওয়েবসাইট ভিজিটরদের মুগ্ধ করবে ও ব্র্যান্ড ভ্যালু বহুগুণ বাড়াবে।
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Spline 3D</span>
+              <span class="card-tag">Three.js</span>
+              <span class="card-tag">WebGL</span>
+              <span class="card-tag">Interactive UI</span>
+            </div>
+          </div>
+
+          <!-- Service 4: Voice AI & Neural Cloning -->
+          <div class="cyber-card">
+            <div class="card-icon-container">
+              <i class="fas fa-microphone-alt"></i>
+            </div>
+            <h3 class="card-title">ভয়েস এআই ও রিয়েল-টাইম এজেন্ট</h3>
+            <p class="card-desc">
+              ElevenLabs, Whisper এবং কাস্টম স্পিচ পাইপলাইন দিয়ে জীবন্ত ভয়েস ক্লোনিং, অডিও ট্রান্সক্রিপশন এবং মানুষের মতো রিয়েল-টাইম কনভারসেশনাল ভয়েস বট তৈরি।
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">ElevenLabs</span>
+              <span class="card-tag">Whisper AI</span>
+              <span class="card-tag">Voice Bot</span>
+              <span class="card-tag">Real-Time Audio</span>
+            </div>
+          </div>
+
+          <!-- Service 5: Workflow Automation (n8n & APIs) -->
+          <div class="cyber-card">
+            <div class="card-icon-container">
+              <i class="fas fa-project-diagram"></i>
+            </div>
+            <h3 class="card-title">স্মার্ট বিজনেস অটোমেশন (n8n)</h3>
+            <p class="card-desc">
+              n8n, Make ও কাস্টম পাইথন স্ক্রিপ্ট দিয়ে ফেসবুক, হোয়াটসঅ্যাপ, গুগল শিট, সিআরএম এবং ইমেইলকে একসাথে সংযুক্ত করে প্রতিষ্ঠানের ম্যানুয়াল কাজের ৯০% অটোমেশন।
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">n8n Workflows</span>
+              <span class="card-tag">Webhooks</span>
+              <span class="card-tag">CRM Sync</span>
+              <span class="card-tag">Python API</span>
+            </div>
+          </div>
+
+          <!-- Service 6: Cinema Video Editing & AI VFX -->
+          <div class="cyber-card">
+            <div class="card-icon-container">
+              <i class="fas fa-video"></i>
+            </div>
+            <h3 class="card-title">সিনেমা ভিডিও এডিটিং ও এআই ভিএফএক্স</h3>
+            <p class="card-desc">
+              DaVinci Resolve এবং Premiere Pro দিয়ে অ্যাডভান্সড কালার গ্রেডিং, সাউন্ড ডিজাইন, মোশন গ্রাফিক্স এবং Runway Gen-3 এআই টুলস দিয়ে সিনেমাটিক ভিজ্যুয়াল নির্মাণ।
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">DaVinci Resolve</span>
+              <span class="card-tag">Premiere Pro</span>
+              <span class="card-tag">Color Grading</span>
+              <span class="card-tag">Runway AI</span>
+            </div>
+          </div>
+
+          <!-- Service 7: Computer Vision & Object Intelligence -->
+          <div class="cyber-card">
+            <div class="card-icon-container">
+              <i class="fas fa-eye"></i>
+            </div>
+            <h3 class="card-title">কম্পিউটার ভিশন ও ভিজ্যুয়াল এআই</h3>
+            <p class="card-desc">
+              YOLOv11, OpenCV ও MediaPipe দিয়ে সিসিটিভি ক্যামেরা বা ভিডিও ফুটেজে রিয়েল-টাইম ফেস ডিটেকশন, অবজেক্ট ট্র্যাকিং ও ইন্ডাস্ট্রিয়াল কোয়ালিটি কন্ট্রোল সলিউশন।
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">YOLOv11</span>
+              <span class="card-tag">OpenCV</span>
+              <span class="card-tag">MediaPipe</span>
+              <span class="card-tag">Image AI</span>
+            </div>
+          </div>
+
+          <!-- Service 8: Brand Identity & Graphic Design -->
+          <div class="cyber-card">
+            <div class="card-icon-container">
+              <i class="fas fa-vector-square"></i>
+            </div>
+            <h3 class="card-title">প্রিমিয়াম ব্র্যান্ড আইডেন্টিটি ও ডিজাইন</h3>
+            <p class="card-desc">
+              Adobe Illustrator, Photoshop এবং Midjourney v6 এর সহায়তায় ব্র্যান্ডের লোগো, প্যাকেজিং, সোশ্যাল মিডিয়া কিট ও হাই-এন্ড ভেক্টর আর্টওয়ার্ক তৈরি।
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">Illustrator</span>
+              <span class="card-tag">Photoshop</span>
+              <span class="card-tag">Midjourney v6</span>
+              <span class="card-tag">Brand Kit</span>
+            </div>
+          </div>
+
+          <!-- Service 9: Computer Training & Mentorship -->
+          <div class="cyber-card">
+            <div class="card-icon-container">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <h3 class="card-title">ফিউচার-রেডি কম্পিউটার প্রশিক্ষণ</h3>
+            <p class="card-desc">
+              চট্টগ্রামের হাটহাজারীতে শিক্ষার্থীদের প্র্যাকটিক্যাল ল্যাবে কম্পিউটার অফিস অ্যাপ্লিকেশন, গ্রাফিক্স ডিজাইন, ভিডিও এডিটিং ও এআই প্রযুক্তির হাতে-কলমে প্রশিক্ষণ প্রদান।
+            </p>
+            <div class="card-tags">
+              <span class="card-tag">MS Office</span>
+              <span class="card-tag">Graphics</span>
+              <span class="card-tag">Video Editing</span>
+              <span class="card-tag">AI Coaching</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE AI TERMINAL (ASIF-BOT CLI)
+         ========================================================================== -->
+    <section class="terminal-section" id="terminal">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fas fa-terminal"></i>
+            <span>ইন্টারেক্টিভ এআই কনসোল</span>
+          </div>
+          <h2 class="section-title">আসিফ-বট <span class="gradient-red-text">টার্মিনাল</span></h2>
+          <p class="section-subtitle">
+            কমান্ড টাইপ করে বা নিচের বোতামগুলোতে ক্লিক করে সরাসরি আমার ভার্চুয়াল এআই অ্যাসিস্ট্যান্টের সাথে কথা বলুন:
+          </p>
+        </div>
+
+        <div class="terminal-window">
+          <!-- Terminal Header Bar -->
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <div class="dot red"></div>
+              <div class="dot yellow"></div>
+              <div class="dot green"></div>
+            </div>
+            <div class="terminal-title">ASIF-NEURAL-OS v2.6 // SECURE SESSION</div>
+            <div style="font-size: 0.72rem; color: #27C93F; font-family: var(--font-cyber);"><i class="fas fa-circle" style="font-size: 0.6rem;"></i> ONLINE</div>
+          </div>
+
+          <!-- Terminal Body -->
+          <div class="terminal-body" id="terminalBody">
+            <div class="terminal-welcome">
+              [ASIF NEURAL CORE BOOTED SUCCESSFULLY]<br>
+              সিস্টেমে স্বাগতম! আমার সম্পর্কে দ্রুত তথ্য জানতে নিচের বাটনগুলোতে ক্লিক করতে পারেন:
+            </div>
+          </div>
+
+          <!-- Quick Command Pills -->
+          <div style="padding: 0 24px 14px; background: var(--dark-panel);">
+            <div class="terminal-pills">
+              <button class="term-pill" data-cmd="/about">👤 /about (পরিচিতি)</button>
+              <button class="term-pill" data-cmd="/skills">⚙️ /skills (দক্ষতা)</button>
+              <button class="term-pill" data-cmd="/ai-services">⚡ /ai-services (সার্ভিস)</button>
+              <button class="term-pill" data-cmd="/training-center">🏫 /training-center (একাডেমি)</button>
+              <button class="term-pill" data-cmd="/contact">📞 /contact (যোগাযোগ)</button>
+              <button class="term-pill" data-cmd="/clear">🧹 /clear</button>
+            </div>
+          </div>
+
+          <!-- Input Bar -->
+          <div class="terminal-input-bar">
+            <span class="term-prompt-symbol">visitor@asif-terminal:~$</span>
+            <input type="text" class="term-input" id="termInput" placeholder="এখানে কমান্ড লিখুন এবং Enter চাপুন..." autocomplete="off">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PROJECTS SHOWCASE (PORTFOLIO WORKS)
+         ========================================================================== -->
+    <section class="projects-section" id="projects">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fas fa-laptop-code"></i>
+            <span>নির্বাচিত কাজসমূহ</span>
+          </div>
+          <h2 class="section-title">আমার তৈরি <span class="gradient-red-text">প্রজেক্ট গ্যালারি</span></h2>
+          <p class="section-subtitle">
+            আধুনিক এআই সিস্টেম, সিনেমাটিক ভিডিও প্রোডাকশন, ৩ডি ওয়েব আর্কিটেকচার এবং গ্রাফিক্স ডিজাইনের কিছু বাস্তব নিদর্শন:
+          </p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">সব প্রজেক্ট (All)</button>
+          <button class="filter-btn" data-filter="ai">এআই ও অটোমেশন</button>
+          <button class="filter-btn" data-filter="video">ভিডিও এডিটিং ও ভিএফএক্স</button>
+          <button class="filter-btn" data-filter="academy">ট্রেনিং ল্যাব ও এডুকেশন</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          
+          <!-- Project 1: Autonomous Multi-Agent AI -->
+          <div class="project-card" data-category="ai">
+            <div class="project-media-wrap">
+              <img src="assets/images/project-ai-agents.jpg" alt="Synapse AI Multi-Agent Platform" class="project-img">
+              <span class="project-badge-type">AI AGENTS</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Synapse AI — অটোনোমাস মাল্টি-এজেন্ট সিস্টেম</h3>
+              <p class="project-desc">
+                চারটি বিশেষায়িত এআই এজেন্টের সমন্বয়ে স্বয়ংক্রিয় বাজার গবেষণা, ডাটা সিন্থেসিস ও রিপোর্ট জেনারেশন পাইপলাইন।
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">LangGraph</span>
+                <span class="stack-tag">CrewAI</span>
+                <span class="stack-tag">Python</span>
+                <span class="stack-tag">FastAPI</span>
+              </div>
+              <a href="#contact" class="project-action-btn">
+                <span>প্রজেক্টটি আলোচনা করুন</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2: Video & VFX Suite -->
+          <div class="project-card" data-category="video">
+            <div class="project-media-wrap">
+              <img src="assets/images/project-vfx-studio.jpg" alt="Cinematic Motion & VFX Studio" class="project-img">
+              <span class="project-badge-type">VFX & CINEMA</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Neural VFX ও সিনেমাটিক কালার গ্রেডিং</h3>
+              <p class="project-desc">
+                DaVinci Resolve স্টুডিও ও Runway Gen-3 সংমিশ্রণে নির্মিত উচ্চমানের বিজ্ঞাপন চিত্র ও সিনেমাটিক সোশ্যাল মিডিয়া ভিজ্যুয়াল।
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">DaVinci Resolve</span>
+                <span class="stack-tag">Premiere Pro</span>
+                <span class="stack-tag">Runway AI</span>
+                <span class="stack-tag">Color Grading</span>
+              </div>
+              <a href="#contact" class="project-action-btn">
+                <span>ভিডিও স্যাম্পল দেখতে যোগাযোগ করুন</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3: Training Academy Innovation Lab -->
+          <div class="project-card" data-category="academy">
+            <div class="project-media-wrap">
+              <img src="assets/images/project-academy-lab.jpg" alt="A.K.A Computer Academy Smart Lab" class="project-img">
+              <span class="project-badge-type">ACADEMY LAB</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">এ.কে.এ স্মার্ট কম্পিউটার ল্যাব সিস্টেম</h3>
+              <p class="project-desc">
+                হাটহাজারীতে কম্পিউটার শিক্ষার্থীদের জন্য আধুনিক ল্যাব ম্যানেজমেন্ট, প্রজেক্টর-ভিত্তিক ভিজ্যুয়াল ক্লাস ও এআই লার্নিং কারিকুলাম।
+              </p>
+              <div class="project-stack">
+                <span class="stack-tag">A.K.A Center</span>
+                <span class="stack-tag">Curriculum</span>
+                <span class="stack-tag">Hands-On Labs</span>
+                <span class="stack-tag">Mentorship</span>
+              </div>
+              <a href="#academy" class="project-action-btn">
+                <span>ল্যাব বিস্তারিত দেখুন</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SKILLS MATRIX
+         ========================================================================== -->
+    <section class="skills-section" id="skills" style="background: var(--bg-secondary);">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fas fa-sliders-h"></i>
+            <span>দক্ষতার পরিমাপ</span>
+          </div>
+          <h2 class="section-title">আমার <span class="gradient-red-text">টেকনিক্যাল পারদর্শিতা</span></h2>
+          <p class="section-subtitle">
+            ক্রিয়েটিভ সফটওয়্যার ও আধুনিক এআই প্রোগ্রামিং উভয় ক্ষেত্রেই গভীর বাস্তব দক্ষতা:
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          
+          <!-- Category 1: Creative & Visual Suite -->
+          <div class="skill-category-box">
+            <h3 class="skill-cat-title">
+              <i class="fas fa-palette"></i>
+              <span>ক্রিয়েটিভ ও মোশন ডিজাইন</span>
+            </h3>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span>Adobe Premiere Pro (ভিডিও এডিটিং)</span>
+                <span class="skill-percent">92%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-progress" data-width="92"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span>DaVinci Resolve (কালার গ্রেডিং)</span>
+                <span class="skill-percent">88%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-progress" data-width="88"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span>CapCut Pro (শর্ট ফর্ম কনটেন্ট)</span>
+                <span class="skill-percent">95%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-progress" data-width="95"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span>Adobe Photoshop & Illustrator</span>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-progress" data-width="90"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span>Spline 3D & WebGL ইন্টারঅ্যাকশন</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-progress" data-width="85"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: AI, Engineering & Automation -->
+          <div class="skill-category-box">
+            <h3 class="skill-cat-title">
+              <i class="fas fa-code"></i>
+              <span>এআই, প্রোগ্রামিং ও অটোমেশন</span>
+            </h3>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span>Python ও ডাটা পাইপলাইন</span>
+                <span class="skill-percent">86%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-progress" data-width="86"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span>LangChain, LangGraph & AI Agents</span>
+                <span class="skill-percent">88%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-progress" data-width="88"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span>n8n অটোমেশন ও এপিআই ইন্টিগ্রেশন</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-progress" data-width="85"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span>RAG Systems ও ভেক্টর ডেটাবেস</span>
+                <span class="skill-percent">82%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-progress" data-width="82"></div>
+              </div>
+            </div>
+
+            <div class="skill-bar-item">
+              <div class="skill-info">
+                <span>কম্পিউটার অফিস প্যাকেজ ও ট্রেইনিং</span>
+                <span class="skill-percent">98%</span>
+              </div>
+              <div class="skill-track">
+                <div class="skill-progress" data-width="98"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TRAINING ACADEMY SPOTLIGHT (এ.কে.এ কম্পিউটার ট্রেনিং সেন্টার)
+         ========================================================================== -->
+    <section class="academy-section" id="academy">
+      <div class="section-container">
+        
+        <div class="academy-banner">
+          
+          <div class="academy-info">
+            <div class="section-tag">
+              <i class="fas fa-award"></i>
+              <span>প্রশিক্ষণ একাডেমি</span>
+            </div>
+
+            <h2 class="academy-title">
+              <i class="fas fa-chalkboard-teacher"></i>
+              <span>এ.কে.এ কম্পিউটার ট্রেনিং সেন্টার</span>
+            </h2>
+
+            <div class="academy-address">
+              <i class="fas fa-map-marker-alt" style="color: var(--red-neon);"></i>
+              <span>হাটহাজারী বড় মাদ্রাসার সামনে, হাটহাজারী, চট্টগ্রাম</span>
+            </div>
+
+            <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; margin-bottom: 24px;">
+              আমরা শুধু সনাতন পদ্ধতিতে কম্পিউটার শেখাই না; শিক্ষার্থীদের বাস্তব ক্যারিয়ার গড়ার জন্য মাইক্রোসফট অফিস প্যাকেজ, গ্রাফিক্স ডিজাইন, ভিডিও এডিটিংয়ের পাশাপাশি আধুনিক এআই টুলসের সঠিক প্রয়োগ শেখাই।
+            </p>
+
+            <div class="academy-features">
+              <div class="acad-feat-item">
+                <i class="fas fa-check-circle"></i>
+                <span>১০০০+ সফল শিক্ষার্থী</span>
+              </div>
+              <div class="acad-feat-item">
+                <i class="fas fa-check-circle"></i>
+                <span>হাতে-কলমে ল্যাব প্র্যাকটিস</span>
+              </div>
+              <div class="acad-feat-item">
+                <i class="fas fa-check-circle"></i>
+                <span>আধুনিক প্রজেক্টর ক্লাসরুম</span>
+              </div>
+              <div class="acad-feat-item">
+                <i class="fas fa-check-circle"></i>
+                <span>লাইফটাইম সাপোর্ট ও গাইডেন্স</span>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+              <a href="tel:+8801887970095" class="btn-cyber-primary">
+                <i class="fas fa-phone-alt"></i>
+                <span>ভর্তির জন্য কল করুন: 01887970095</span>
+              </a>
+              <a href="https://wa.me/8801887970095" target="_blank" rel="noopener noreferrer" class="btn-cyber-outline">
+                <i class="fab fa-whatsapp"></i>
+                <span>হোয়াটসঅ্যাপ মেসেজ</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="academy-visual">
+            <img src="assets/images/project-academy-lab.jpg" alt="A.K.A Computer Academy Training Lab">
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT & LOCATION SECTION
+         ========================================================================== -->
+    <section class="contact-section" id="contact">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <div class="section-tag">
+            <i class="fas fa-envelope-open-text"></i>
+            <span>যোগাযোগ করুন</span>
+          </div>
+          <h2 class="section-title">আসুন আপনার প্রজেক্ট বা ক্যারিয়ার নিয়ে <span class="gradient-red-text">কথা বলি</span></h2>
+          <p class="section-subtitle">
+            যেকোনো নতুন কাজের প্রস্তাব, এআই কনসাল্টেশন কিংবা প্রশিক্ষণের জন্য নিচের চ্যানেলে সরাসরি নক দিন:
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Info Cards -->
+          <div class="contact-info-panel">
+            
+            <a href="tel:+8801887970095" class="contact-channel-card">
+              <div class="channel-icon-wrap"><i class="fas fa-phone"></i></div>
+              <div>
+                <div class="channel-sub">প্রাথমিক মোবাইল নম্বর</div>
+                <div class="channel-val">01887970095</div>
+              </div>
+            </a>
+
+            <a href="tel:+8801851353676" class="contact-channel-card">
+              <div class="channel-icon-wrap"><i class="fas fa-mobile-alt"></i></div>
+              <div>
+                <div class="channel-sub">বিকল্প মোবাইল নম্বর</div>
+                <div class="channel-val">01851353676</div>
+              </div>
+            </a>
+
+            <a href="mailto:akamdasif@gmail.com" class="contact-channel-card">
+              <div class="channel-icon-wrap"><i class="fas fa-envelope"></i></div>
+              <div>
+                <div class="channel-sub">অফিসিয়াল ইমেইল</div>
+                <div class="channel-val">akamdasif@gmail.com</div>
+              </div>
+            </a>
+
+            <div class="contact-channel-card" style="cursor: default;">
+              <div class="channel-icon-wrap"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <div class="channel-sub">স্থায়ী ও বর্তমান ঠিকানা</div>
+                <div class="channel-val">সরকার হাট, হাটহাজারী, চট্টগ্রাম</div>
+              </div>
+            </div>
+
+            <div class="contact-channel-card" style="cursor: default;">
+              <div class="channel-icon-wrap"><i class="fas fa-building"></i></div>
+              <div>
+                <div class="channel-sub">ট্রেনিং সেন্টার লোকেশন</div>
+                <div class="channel-val">হাটহাজারী বড় মাদ্রাসার সামনে, চট্টগ্রাম</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-card">
+            <h3 class="form-title">
+              <i class="fas fa-paper-plane" style="color: var(--red-neon); margin-right: 8px;"></i>
+              <span>একটি বার্তা পাঠান</span>
+            </h3>
+
+            <form id="contactForm" onsubmit="return false;">
+              <div class="form-field">
+                <label for="contactName" class="form-label">আপনার পূর্ণ নাম *</label>
+                <input type="text" id="contactName" class="form-input" placeholder="যেমন: রহিম আহমেদ" required>
+              </div>
+
+              <div class="form-field">
+                <label for="contactPhone" class="form-label">মোবাইল নম্বর *</label>
+                <input type="tel" id="contactPhone" class="form-input" placeholder="01XXXXXXXXX" required>
+              </div>
+
+              <div class="form-field">
+                <label for="contactEmail" class="form-label">ইমেইল ঠিকানা (ঐচ্ছিক)</label>
+                <input type="email" id="contactEmail" class="form-input" placeholder="you@domain.com">
+              </div>
+
+              <div class="form-field">
+                <label for="contactMessage" class="form-label">আপনার বার্তা বা প্রজেক্ট বিবরণ *</label>
+                <textarea id="contactMessage" class="form-textarea" placeholder="আপনার প্রয়োজনীয় কাজ বা প্রশ্ন বিস্তারিত লিখুন..." required></textarea>
+              </div>
+
+              <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <button type="button" id="contactSubmitBtn" class="form-submit-btn" style="flex: 1.2;">
+                  <i class="fas fa-paper-plane"></i>
+                  <span>বার্তা পাঠান (Send to akamdasif@gmail.com)</span>
+                </button>
+                <button type="button" id="mailDirectBtn" class="btn-cyber-outline" style="padding: 14px 18px;" title="আপনার ইমেইল অ্যাপ দিয়ে সরাসরি পাঠান">
+                  <i class="fas fa-envelope-open" style="color: var(--red-dark); font-size: 1.1rem;"></i>
+                  <span>Gmail/Mail</span>
+                </button>
+                <button type="button" id="waDirectBtn" class="btn-cyber-outline" style="padding: 14px 18px;" title="সরাসরি হোয়াটসঅ্যাপে পাঠান">
+                  <i class="fab fa-whatsapp" style="color: #25D366; font-size: 1.2rem;"></i>
+                  <span>WhatsApp</span>
+                </button>
+              </div>
+              <p style="font-size: 0.78rem; color: var(--text-muted); margin-top: 10px; display: flex; align-items: center; gap: 6px;">
+                <i class="fas fa-shield-alt" style="color: var(--red-dark);"></i>
+                <span>বার্তা পাঠানো হলে তা সরাসরি <strong>akamdasif@gmail.com</strong> ইনবক্সে পৌঁছে যাবে।</span>
+              </p>
+            </form>
+          </div>
+
+        </div>
+
+        <!-- Google Map Embed (Hathazari, Chittagong) -->
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14781.456!2d91.7919!3d22.4826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30ad26fbd84cb955%3A0x7f2d22f0b0124aec!2sHathazari%2C%20Chittagong!5e0!3m2!1sen!2sbd!4v1600000000000!5m2!1sen!2sbd"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="জাফরুল হাসান আসিফ - লোকেশন হাটহাজারী চট্টগ্রাম">
+          </iframe>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER (HUD FOOTER)
+       ========================================================================== -->
+  <footer class="footer-hud">
+    <div class="section-container">
+      <div class="footer-top">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <div class="brand-logo-cube">আ</div>
+          <div>
+            <div style="font-weight: 700; font-size: 1.2rem; color: #FFFFFF;">জাফরুল হাসান আসিফ</div>
+            <div style="color: #94A3B8; font-size: 0.85rem;">AI Engineer • Computer Trainer • 3D Creative Director</div>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 12px;">
+          <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" class="social-round-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/8801887970095" target="_blank" rel="noopener noreferrer" class="social-round-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" class="social-round-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://linkedin.com/in/" target="_blank" rel="noopener noreferrer" class="social-round-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://t.me/" target="_blank" rel="noopener noreferrer" class="social-round-btn" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © ২০২৬ <span style="color: #FFFFFF; font-weight: 600;">জাফরুল হাসান আসিফ</span> — সর্বস্বত্ব সংরক্ষিত।
+        </div>
+        <div>
+          <a href="#hero" style="color: #94A3B8; text-decoration: none; display: flex; align-items: center; gap: 6px; transition: color 0.3s;" onmouseover="this.style.color='#FFFFFF'" onmouseout="this.style.color='#94A3B8'">
+            <span>উপরে যান</span>
+            <i class="fas fa-arrow-up"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/spline-hero.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
