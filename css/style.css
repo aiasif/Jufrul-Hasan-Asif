@@ -256,12 +256,14 @@ body::before {
 
 .brand-status {
   font-family: var(--font-cyber);
-  font-size: 0.68rem;
-  color: var(--text-muted);
-  letter-spacing: 1px;
+  font-size: 0.64rem;
+  color: #64748B;
+  letter-spacing: 0.8px;
   display: flex;
   align-items: center;
   gap: 6px;
+  margin-top: 2px;
+  white-space: nowrap;
 }
 
 .status-pulse {
@@ -421,6 +423,11 @@ body::before {
   font-size: 1.5rem;
   color: var(--red-dark);
   cursor: pointer;
+}
+
+/* Mobile Menu Base (Hidden by default on Desktop) */
+.mobile-menu-overlay {
+  display: none;
 }
 
 /* ==========================================================================
@@ -1891,17 +1898,21 @@ section {
     inset: 0;
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(25px);
-    z-index: 999;
+    z-index: 99999;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 24px;
     transform: translateY(-100%);
-    transition: transform 0.4s ease;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s;
+    visibility: hidden;
+    pointer-events: none;
   }
   .mobile-menu-overlay.open {
     transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
   }
   .mobile-link {
     font-size: 1.4rem;
